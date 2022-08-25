@@ -1,0 +1,252 @@
+body {
+    font-family: "Proxima Nova", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+    color: #1E2E36;
+}
+
+.d-f {
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.d-g {
+    display: grid;
+}
+
+.jc-sb {
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.jc-c {
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.ai-c {
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fd-c {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.fw-w {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-e {
+    text-align: end;
+}
+
+.gtc-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gtc-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+    .gtc-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gtc-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.socials li {
+    margin-right: 30px;
+}
+
+.socials li:last-child {
+    margin-right: 0px;
+}
+
+button {
+    display: inline-block;
+    position: relative;
+    border: transparent;
+    background: #44C697;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+    font-size: 18px;
+    line-height: 125%;
+    transition: color 0.3s;
+    cursor: pointer;
+    padding-top: 14px;
+    padding-right: 46px;
+    padding-bottom: 14px;
+    padding-left: 46px;
+}
+
+button::before, button::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #1E2E36;
+    transition-delay: 0.2s;
+}
+
+button::before {
+    right: 0;
+    top: 0;
+}
+
+button::after {
+    left: 0;
+    bottom: 0;
+}
+
+button:hover {
+    color: #1E2E36;
+}
+
+button:hover::before, button:hover::after {
+    width: 100%;
+    transition-delay: 0s;
+}
+
+button:hover span::before, button:hover span::after {
+    height: 100%;
+    transition-delay: 0.2s;
+}
+
+button span::before, button span::after {
+    content: "";
+    width: 2px;
+    height: 0;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #1E2E36;
+    transition-delay: 0s;
+}
+
+button span::before {
+    left: 0;
+    top: 0;
+}
+
+button span::after {
+    right: 0;
+    bottom: 0;
+}
+
+.line::before, .line::after {
+    top: 0;
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 100%;
+    background: #44C697;
+}
+
+.line-left::before {
+    left: 0;
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+}
+
+.line-left::after {
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.line-right::after {
+    right: 0;
+    -webkit-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+.line-right::before {
+    content: "";
+    width: 0;
+    height: 0;
+}
+
+.button-slide {
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.button-slide svg {
+    width: 8px;
+    height: 12px;
+}
+
+.section {
+    padding-top: 100px;
+}
+
+.title {
+    font-size: 48px;
+    line-height: 125%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.title span {
+    position: relative;
+}
+
+.title span::before {
+    content: "";
+    width: 20px;
+    height: 50px;
+    background: #44C697;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.border-bottom {
+    border-bottom: 3px solid transparent;
+}
+
+.border-bottom:hover {
+    border-bottom: 3px solid #44C697;
+}
